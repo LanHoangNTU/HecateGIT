@@ -1,0 +1,4 @@
+*.exe
+*.dll
+src/include
+src/lib
