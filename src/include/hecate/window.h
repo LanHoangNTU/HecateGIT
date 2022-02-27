@@ -9,6 +9,9 @@ class Window {
     public:
         Window();
         ~Window();
+
+        // TODO Add more window create options
+        // TODO Read configs from a file (start app + during runtime)
         Window* Size(int width, int height);
 
         void CreateWindow();
