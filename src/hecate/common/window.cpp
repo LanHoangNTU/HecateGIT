@@ -52,10 +52,18 @@ void Window::Start() {
             }
         }
 
-        SDL_SetRenderDrawColor(m_Renderer, 0, 255, 0, 255);
+        SDL_SetRenderDrawColor(m_Renderer, m_RenderColor.r, m_RenderColor.g, m_RenderColor.b, m_RenderColor.a);
         SDL_RenderClear(m_Renderer);
         SDL_RenderPresent(m_Renderer);
     }
+}
+
+Window* Window::BaseColor(int r, int g, int b, int a) {
+    m_RenderColor = SDL_Color();
+    m_RenderColor.r = r;
+    m_RenderColor.g = g;
+    m_RenderColor.b = b;
+    m_RenderColor.a = a;
 }
 
 void Window::Quit() {
