@@ -2,21 +2,18 @@
 #include <iostream>
 #include <memory>
 #include <hecate/window.h>
+#include <hecate/square.h>
+#include <hecate/renderable.h>
 
 int main(int argc, char** argv) {
 
-    try {
-        std::unique_ptr<Window> win = std::make_unique<Window>(Window());
-        
-        win ->Size(1366, 786)
-            ->BaseColor(0, 255, 0, 255);
-            
-        win->CreateWindow();
-        win->Start();
-        win->Quit();
-    } catch (char const* error) {
-        std::cout << error;
-    }
+    Window* win = new Window();
+    win->Size(1536, 864)
+        ->BaseColor(217, 223, 228, 255);
+        // ->BaseColor(0, 0, 0, 255);
+    win->CreateWindow();
+    win->Start();
+    win->Quit();
 
     return 0;
 }
